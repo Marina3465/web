@@ -4,9 +4,14 @@
 }
 
 .conteiner {
-    width: 100%;
+    width: 100vw;
     height: 100vh;
-    background: no-repeat url("/src/img/bg_auth.jpg");
+}
+
+.conteiner-img {
+    width: 100%;
+    min-height: 100%;
+    background: no-repeat url("/src/img/bg_auth.jpg") center center;
     -moz-background-size: cover;
     /* Firefox 3.6+ */
     -webkit-background-size: cover;
@@ -14,21 +19,27 @@
     -o-background-size: cover;
     /* Opera 9.6+ */
     background-size: cover;
+    overflow: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.content {
+    margin: auto;
 }
 
 .logo-img img {
     width: 240px;
     height: 185px;
 }
-p{
-    font-size: 15px;
-}
-form {
-    display: grid;
 
+p {
+    font-size: 12px;
+    text-align: left;
+    margin-left: 5px;
+    color: red;
+}
+
+form {
     border-radius: 30px;
     background: #fff;
     border: 4px solid #BCBCBC;
@@ -40,25 +51,42 @@ form {
     box-sizing: border-box;
 }
 
-input[type="email"],input[type="text"],
+.passw-eye {
+    display: inline-block;
+}
+
+.passw-eye input {
+    margin-right: 8px;
+}
+
+input[type="email"] {
+    margin-left: -24px;
+}
+
+input[type="email"],
+input[type="text"],
 input[type="password"] {
     border-radius: 10px;
     border: 3px solid #F0DC00;
     background: #FFF9B9;
     padding: 10px;
     height: 43px;
+    width: 260px;
     box-sizing: border-box;
-    /* font-family: 'Montserrat'; */
     font-size: 20px;
+    margin-bottom: 5px;
 }
 
 input[type="submit"] {
     height: 43px;
     background-color: #FFC530;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 20px;
     box-sizing: border-box;
     border: 0px;
+    width: 290px;
+    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 input[type="submit"]:hover {
@@ -68,7 +96,7 @@ input[type="submit"]:hover {
 a:link,
 a:visited {
     color: #FF8A00;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
     text-decoration-line: underline;
 }
@@ -78,83 +106,112 @@ a:hover {
     color: #fccc52;
 }
 
-@media screen and (width < 800px) {
-    .conteiner {
-        width: 100%;
-        height: 100vh;
-        /* background: no-repeat url(".../img/bg_auth.jpg"); */
-        background: no-repeat url("/src/img/bg_auth.jpg");
-        -moz-background-size: cover;
-        /* Firefox 3.6+ */
-        -webkit-background-size: cover;
-        /* Safari 3.1+ и Chrome 4.0+ */
-        -o-background-size: cover;
-        /* Opera 9.6+ */
-        background-size: cover;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+@media screen and (width < 500px) {
+
+    p {
+        font-size: 10px;
     }
 
     .logo-img img {
         width: 194px;
         height: 165px;
     }
-    p{
-        font-size: 10px;
-    }
+
     form {
-        display: grid;
-        grid-template-rows: 140px 60px 60px 60px 30px;
-        border-radius: 30px;
-        background: #fff;
-        border: 4px solid #BCBCBC;
-        width: 260px;
-        height: 460px;
-        text-align: center;
-        align-items: center;
-        padding: 10px 40px;
-        box-sizing: border-box;
-        justify-content: center;
+        width: 340px;
+        height: 560px;
+        padding: 30px;
     }
 
-    input[type="email"],input[type="text"],
+    .passw-eye {
+        display: inline-block;
+    }
+
+    .passw-eye input {
+        margin-right: 8px;
+    }
+
+    input[type="email"],
+    input[type="text"],
     input[type="password"] {
-        border-radius: 10px;
-        border: 3px solid #F0DC00;
-        background: #FFF9B9;
+
         padding: 10px;
-        height: 42px;
-        width: 200px;
+        height: 40px;
+        width: 240px;
         box-sizing: border-box;
         font-size: 16px;
+        margin-bottom: 5px;
+    }
+
+    input[type="email"] {
+        margin-left: -30px;
     }
 
     input[type="submit"] {
         height: 35px;
-        background-color: #FFC530;
-        border-radius: 10px;
         font-size: 16px;
-        box-sizing: border-box;
-        border: 0px;
-        width: 200px;
-
-    }
-
-    input[type="submit"]:hover {
-        background-color: #fccc52;
+        width: 240px;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     a:link,
     a:visited {
-        color: #FF8A00;
         font-size: 16px;
-        font-weight: 700;
-        text-decoration-line: underline;
+    }
+}
+
+@media screen and (width < 300px) {
+
+    .logo-img img {
+        width: 180px;
+        height: 125px;
     }
 
-    a:active,
-    a:hover {
-        color: #fccc52;
+    p {
+        font-size: 8px;
+    }
+
+    form {
+        width: 240px;
+        height: 460px;
+        padding: 20px;
+    }
+
+    .passw-eye {
+        display: inline-block;
+    }
+
+    .passw-eye input {
+        margin-right: 4px;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    input[type="password"] {
+
+        padding: 8px;
+        height: 30px;
+        width: 170px;
+        box-sizing: border-box;
+        font-size: 14px;
+        margin-bottom: 3px;
+    }
+
+    input[type="email"] {
+        margin-left: -20px;
+    }
+
+    input[type="submit"] {
+        height: 30px;
+        font-size: 14px;
+        width: 180px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    a:link,
+    a:visited {
+        font-size: 14px;
     }
 }
