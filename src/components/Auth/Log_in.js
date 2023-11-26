@@ -1,19 +1,19 @@
 import './Auth-Log.css';
 import { useForm } from "react-hook-form";
 import React, { useState } from 'react';
-import { Link } from "react-router-dom"; 
-
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye } from "@fortawesome/free-solid-svg-icons";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 const eye = <FontAwesomeIcon icon={faEye} />;
 const eyeSlah = <FontAwesomeIcon icon={faEyeSlash} />;
 
-function Auth() {
+function Log_in() {
     const { register, handleSubmit, formState: { errors }, reset, watch, getValues } = useForm();
     const onSubmit = (data) => {
         console.log(data);
     }
+
     const [passwordShown, setPasswordShown] = useState(false);
     const [confirmPasswordShown, setConfPasswordShown] = useState(false);
     const togglePasswordVisiblity = () => {
@@ -41,24 +41,16 @@ function Auth() {
 
                         <div className='passw-eye'><input type={passwordShown ? "text" : "password"} placeholder='Пароль' {...register("password", { required: true, pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,30}$/ })} /><i onClick={togglePasswordVisiblity}>{passwordShown ? eyeSlah : eye}</i></div><br></br>
                         {errors.password && <p>Пароль должен содержать 1 заглавную букву, 1 цифру и быть не менее 6 символов</p>}<br></br>
-                        
-                        <div className='passw-eye'><input type={confirmPasswordShown ? "text" : "password"} placeholder='Повторите пароль'  {...register("confirm_password", {
-                            required: true,
-                            validate: (val) => {
-                                if (watch('password') != val) {
-                                    return false;
-                                }
-                            },
-                        })} /><i onClick={toggleConfPasswordVisiblity}>{confirmPasswordShown ? eyeSlah : eye}</i></div><br></br>
-                        {errors.confirm_password && <p>Пароли не совпадают</p>}<br></br>
-                        
-                        <input type="submit" value='Зарегистироваться' /><br></br>
-                        
-                        <Link to="/login">Войти</Link>
+
+
+
+                        <input type="submit" value='Войти' /><br></br>
+                        <Link to="/auth">Зарегистрироваться</Link>
+
                     </form>
                 </div>
             </div>
         </div>
     );
 }
-export default Auth;
+export default Log_in;

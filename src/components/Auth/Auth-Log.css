@@ -30,6 +30,7 @@
 .logo-img img {
     width: 240px;
     height: 185px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -86,7 +87,7 @@ input[type="submit"] {
     border: 0px;
     width: 290px;
     margin-bottom: 20px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 input[type="submit"]:hover {
@@ -144,7 +145,7 @@ a:hover {
     }
 
     input[type="email"] {
-        margin-left: -30px;
+        margin-left: -25px;
     }
 
     input[type="submit"] {
