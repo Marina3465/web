@@ -27,22 +27,22 @@ function Auth() {
     }
     return (
 
-        <div className='conteiner'>
-            <div className='conteiner-img'>
-                <div className='content'>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-                        <div className='logo-img'>
+        <div className='conteiner-auth'>
+            <div className='conteiner-auth-img'>
+                <div className='content-auth'>
+                    <form className='form-auth' onSubmit={handleSubmit(onSubmit)}>
+                        <div className='auth-logo-img'>
                             <img src={require('../../img/logo.png')} alt='Логотип сайта' />
                         </div>
-                        <input type="email" placeholder='Почта' {...register("email", {
+                        <input className='auth-email auth-input' type="email" placeholder='Почта' {...register("email", {
                             required: true, pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
                         })} /><br></br>
-                        {errors.email && <p>Не корректный ввод почты</p>}<br></br>
+                        {errors.email && <p className='auth-error'>Не корректный ввод почты</p>}<br></br>
 
-                        <div className='passw-eye'><input type={passwordShown ? "text" : "password"} placeholder='Пароль' {...register("password", { required: true, pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,30}$/ })} /><i onClick={togglePasswordVisiblity}>{passwordShown ? eyeSlah : eye}</i></div><br></br>
-                        {errors.password && <p>Пароль должен содержать 1 заглавную букву, 1 цифру и быть не менее 6 символов</p>}<br></br>
+                        <div className='passw-eye'><input className='auth-input' type={passwordShown ? "text" : "password"} placeholder='Пароль' {...register("password", { required: true, pattern: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,30}$/ })} /><i onClick={togglePasswordVisiblity}>{passwordShown ? eyeSlah : eye}</i></div><br></br>
+                        {errors.password && <p className='auth-error'>Пароль должен содержать 1 заглавную букву, 1 цифру и быть не менее 6 символов</p>}<br></br>
                         
-                        <div className='passw-eye'><input type={confirmPasswordShown ? "text" : "password"} placeholder='Повторите пароль'  {...register("confirm_password", {
+                        <div className='passw-eye'><input className='auth-input' type={confirmPasswordShown ? "text" : "password"} placeholder='Повторите пароль'  {...register("confirm_password", {
                             required: true,
                             validate: (val) => {
                                 if (watch('password') != val) {
@@ -50,11 +50,11 @@ function Auth() {
                                 }
                             },
                         })} /><i onClick={toggleConfPasswordVisiblity}>{confirmPasswordShown ? eyeSlah : eye}</i></div><br></br>
-                        {errors.confirm_password && <p>Пароли не совпадают</p>}<br></br>
+                        {errors.confirm_password && <p  className='auth-error'>Пароли не совпадают</p>}<br></br>
                         
-                        <input type="submit" value='Зарегистироваться' /><br></br>
+                        <input className='auth-butn' type="submit" value='Зарегистироваться' /><br></br>
                         
-                        <Link to="/login">Войти</Link>
+                        <Link className='auth-link' to="/login">Войти</Link>
                     </form>
                 </div>
             </div>

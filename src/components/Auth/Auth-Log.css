@@ -3,12 +3,12 @@
     padding: 0px;
 }
 
-.conteiner {
+.conteiner-auth {
     width: 100vw;
     height: 100vh;
 }
 
-.conteiner-img {
+.conteiner-auth-img {
     width: 100%;
     min-height: 100%;
     background: no-repeat url("/src/img/bg_auth.jpg") center center;
@@ -23,24 +23,24 @@
     display: flex;
 }
 
-.content {
+.content-auth {
     margin: auto;
 }
 
-.logo-img img {
+.auth-logo-img img {
     width: 240px;
     height: 185px;
     margin-bottom: 20px;
 }
 
-p {
+.auth-error {
     font-size: 12px;
     text-align: left;
     margin-left: 5px;
     color: red;
 }
 
-form {
+.form-auth {
     border-radius: 30px;
     background: #fff;
     border: 4px solid #BCBCBC;
@@ -60,13 +60,11 @@ form {
     margin-right: 8px;
 }
 
-input[type="email"] {
-    margin-left: -24px;
+.auth-email {
+    margin-left: -25px;
 }
 
-input[type="email"],
-input[type="text"],
-input[type="password"] {
+.auth-input {
     border-radius: 10px;
     border: 3px solid #F0DC00;
     background: #FFF9B9;
@@ -78,7 +76,7 @@ input[type="password"] {
     margin-bottom: 5px;
 }
 
-input[type="submit"] {
+.auth-butn {
     height: 43px;
     background-color: #FFC530;
     border-radius: 10px;
@@ -90,35 +88,35 @@ input[type="submit"] {
     margin-top: 10px;
 }
 
-input[type="submit"]:hover {
+.auth-butn:hover {
     background-color: #fccc52;
 }
 
-a:link,
-a:visited {
+.auth-link:link,
+.auth-link:visited {
     color: #FF8A00;
     font-size: 20px;
     font-weight: 700;
     text-decoration-line: underline;
 }
 
-a:active,
-a:hover {
+.auth-link:active,
+.auth-link:hover {
     color: #fccc52;
 }
 
 @media screen and (width < 500px) {
 
-    p {
+    .auth-error {
         font-size: 10px;
     }
 
-    .logo-img img {
+    .auth-logo-img img {
         width: 194px;
         height: 165px;
     }
 
-    form {
+    .form-auth {
         width: 340px;
         height: 560px;
         padding: 30px;
@@ -132,9 +130,7 @@ a:hover {
         margin-right: 8px;
     }
 
-    input[type="email"],
-    input[type="text"],
-    input[type="password"] {
+    .auth-input {
 
         padding: 10px;
         height: 40px;
@@ -144,11 +140,11 @@ a:hover {
         margin-bottom: 5px;
     }
 
-    input[type="email"] {
+    .auth-email {
         margin-left: -25px;
     }
 
-    input[type="submit"] {
+    .auth-butn {
         height: 35px;
         font-size: 16px;
         width: 240px;
@@ -156,24 +152,23 @@ a:hover {
         margin-top: 10px;
     }
 
-    a:link,
-    a:visited {
+    .auth-link:link {
         font-size: 16px;
     }
 }
 
 @media screen and (width < 300px) {
 
-    .logo-img img {
+    .auth-logo-img img {
         width: 180px;
         height: 125px;
     }
 
-    p {
+    .auth-error {
         font-size: 8px;
     }
 
-    form {
+    .form-auth {
         width: 240px;
         height: 460px;
         padding: 20px;
@@ -187,9 +182,7 @@ a:hover {
         margin-right: 4px;
     }
 
-    input[type="email"],
-    input[type="text"],
-    input[type="password"] {
+    .auth-input {
 
         padding: 8px;
         height: 30px;
@@ -199,11 +192,11 @@ a:hover {
         margin-bottom: 3px;
     }
 
-    input[type="email"] {
+    .auth-email {
         margin-left: -20px;
     }
 
-    input[type="submit"] {
+    .auth-butn {
         height: 30px;
         font-size: 14px;
         width: 180px;
@@ -211,8 +204,7 @@ a:hover {
         margin-top: 10px;
     }
 
-    a:link,
-    a:visited {
+    .auth-link:link {
         font-size: 14px;
     }
 }
