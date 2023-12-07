@@ -92,7 +92,6 @@
     display: grid;
     grid-template-columns: repeat(3, 420px);
     gap: 20px;
-
     justify-content: space-around;
 }
 
@@ -161,4 +160,79 @@
     background-size: 20px;
     padding: 0 33px;
     margin-bottom: 10px;
+}
+
+.load-cats {
+    font-size: 24px;
+    font-weight: 500;
+    width: 421px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFC530;
+    margin: 0 auto;
+    padding: 10px 0;
+    margin-bottom: 70px;
+}
+
+.home-footer {
+    width: 100wv;
+    height: 110px;
+    background: #FFC530;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.list-link {
+    display: flex;
+    width: 270px;
+    justify-content: space-between;
+    margin-left: 70px;
+    list-style: none;
+}
+
+.list-link-vk {
+    width: 50px;
+    height: 50px;
+    background: url("../../img/vk.png") no-repeat center center;
+    background-size: 50px;
+}
+
+.list-link-tg {
+    width: 50px;
+    height: 50px;
+    background: url("../../img/telegram.png") no-repeat center center;
+    background-size: 50px;
+}
+
+.list-link-wt {
+    width: 50px;
+    height: 50px;
+    background: url("../../img/whatsapp.png") no-repeat center center;
+    background-size: 50px;
+}
+
+.name-comp {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.home-footer-phone {
+    color: #000;
+    text-decoration: none;
+}
+
+.home-footer-email {
+    color: #000;
+    text-decoration: none;
+}
+
+.home-footer-phone-email {
+    list-style: none;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: right;
+    margin-right: 70px;
+
+
 }
