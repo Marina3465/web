@@ -1,0 +1,29 @@
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .modal-content {
+    width: 50vw;
+    height: 100vh;
+    background: #fff;
+    /* position: relative;
+    left: 100%;    
+    opacity: 0;
+    transform: left 5s; */
+
+  }
+
+  /* .modal-content.active{
+    opacity: 1;
+    left: 100%
+  } */
+
+  
